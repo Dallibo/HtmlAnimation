@@ -1,0 +1,11 @@
+ul{list-style-type: greek;}
+a:hover{text-decoration: underline;}
+a{text-decoration: none;color: rgb(0, 61, 173)}
+.tabel {
+    display:table;
+    padding: 5px;
+    border: 1px solid #a2aab3;
+    background-color: #f0f0f0;
+    font-size: 100% 
+}
+
