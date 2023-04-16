@@ -34,3 +34,7 @@ tr:nth-child(10) td
  {
   background-color: rgb(209, 208, 208);
 }
+.p {
+  position: sticky;
+  top: 0;
+}
