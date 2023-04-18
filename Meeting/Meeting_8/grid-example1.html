@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            background-color: #09232d;
+            border-radius: 5px;
+            padding: 1em;
+            display: grid;
+            grid-template-columns: 200px 50% 300px;
+            margin: 1em 0;
+        }
+        .grid-container div{
+            padding: 0.3em 4em;
+            /* margin: 10px; */
+            background-color: pink;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        div.item-2{
+            background-color: cadetblue;
+        }
+        div.item-3{
+            background-color: coral;
+        }
+        .inline{
+            display: inline-grid;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item-1">Item 1</div>
+        <div class="item-2">Item 2</div>
+        <div class="item-3">Item 3</div>
+    </div>
+    <div class="grid-container inline">
+        <div class="item-1">Item 1</div>
+        <div class="item-2">Item 2</div>
+        <div class="item-3">Item 3</div>
+    </div>
+</body>
+</html>

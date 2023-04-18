@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            display: flex;
+            border: 1px solid navy;
+            width: 1000px;
+            /* box-sizing: border-box; */
+        }
+        .item{
+            padding: 10px;
+            background-color: cadetblue;
+            /* width: 25%; */
+            flex-basis: 200px;
+            /* flex-grow: 1; */
+            flex-grow: 0;
+        }
+        .item:nth-child(4n+1){
+            background-color: coral;
+        }
+        .item:nth-child(4n+2){
+            background-color: cornflowerblue;
+        }
+        .item:nth-child(4n+3){
+            background-color: darkkhaki;
+        }
+        .gr-1{
+            min-width: 250px;
+        }
+        .gr-2{
+            flex-grow: 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="item gr-1">
+            <h2>Item 1</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, recusandae incidunt amet similique ad, repellat quidem vel accusamus a voluptates quas. Voluptatem quisquam magnam laudantium rerum iusto a exercitationem, repudiandae voluptate numquam delectus quibusdam qui suscipit molestiae inventore quo quod saepe eum? Sunt velit doloremque nemo rem placeat tempore quos quae omnis. Exercitationem error explicabo animi consequatur doloribus debitis hic, obcaecati blanditiis aperiam iste expedita. Incidunt officiis repellendus reprehenderit architecto?</p>
+        </div>
+        <div class="item">
+            <h2>Item 2</h2>
+            <p>Eaque totam hic ducimus expedita at perferendis harum fugiat, dolores similique aperiam exercitationem maxime quasi magni perspiciatis ipsa quia dolore mollitia veritatis, unde in quidem tempora illo quo. Mollitia omnis quas, doloribus odit facilis dolore dolores dolor vero possimus culpa minima obcaecati explicabo aperiam in cumque minus? Dolorum ut expedita numquam rem! Soluta, ut? Ipsum excepturi magnam magni laborum, obcaecati maxime placeat tenetur facere doloribus cupiditate eius quibusdam ratione numquam!</p>
+        </div>
+        <div class="item">
+            <h2>Item 3</h2>
+            <p>Quas sequi dignissimos aliquam vel adipisci, voluptatum necessitatibus eaque accusantium, quam, provident iure error tenetur! Sit ducimus vero enim ratione quam rem, natus minima culpa sunt qui adipisci quaerat assumenda odio officia dolor. Voluptatibus ipsa a velit quaerat. Eum facilis id ut unde tenetur ipsa nemo itaque magni, non nesciunt adipisci quod qui animi laboriosam temporibus enim, aliquid neque! Excepturi tempore cupiditate sed ducimus placeat natus, iure ipsam officia pariatur.</p>
+        </div>
+        <div class="item gr-2">
+            <h2>Item 4</h2>
+            <p>Quos facere animi, nisi neque similique unde, sit dolores rerum at nostrum nihil, atque nobis. Libero fuga optio delectus eius unde recusandae asperiores quia quo omnis tenetur blanditiis repudiandae, commodi autem excepturi odio necessitatibus at labore, similique voluptates. Quasi ullam molestiae debitis enim assumenda officia, ex maiores similique delectus, voluptatibus sapiente eligendi ipsam! Molestias quis nemo nostrum labore sed, iste exercitationem iure est sapiente a nulla voluptatibus voluptates eius dolorum.</p>
+        </div>
+    </div>
+</body>
+</html>

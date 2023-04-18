@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            display: flex; 
+            border: 1px solid navy;
+            margin: 0.5em;
+            flex-wrap: wrap;
+            height: 150px;
+        }
+        .item{
+            padding: 1em 8em;
+            background-color: cornflowerblue;
+        }
+        .item:nth-child(6n+1){
+            background-color: coral;
+        }
+        .item:nth-child(6n+2){
+            background-color:darkkhaki;
+        }
+        .item:nth-child(6n+3){
+            background-color:darksalmon;
+        }
+        .item:nth-child(6n+4){
+            background-color:greenyellow;
+        }
+        .item:nth-child(6n+5){
+            background-color:hotpink;
+        }
+        .dir-1{
+            align-content: flex-start;
+        }
+        .dir-2{
+            align-content: flex-end;
+        }
+        .dir-3{
+            align-content: center;
+        }
+        .dir-4{
+            align-content: stretch;
+        }
+        .dir-5{
+            align-content: space-around;
+        }
+        .dir-6{
+            align-content: space-between;
+        }
+        .dir-7{
+            align-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <h2>align-content: flex-start</h2>
+    <div class="wrapper dir-1">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+    <h2> align-content: flex-end</h2>
+    <div class="wrapper dir-2">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+    <h2>align-content: center</h2>
+    <div class="wrapper dir-3">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+    <h2>align-content: stretch;</h2>
+    <div class="wrapper dir-4">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+    <h2>align-content: space-around;</h2>
+    <div class="wrapper dir-5">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+    <h2>align-content:space-between;</h2>
+    <div class="wrapper dir-6">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+    <h2>align-content:space-evenly;</h2>
+    <div class="wrapper dir-7">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+</body>
+</html>

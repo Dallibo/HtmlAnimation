@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            display: flex;
+            border: 1px solid navy;
+            margin: 0.5em;
+            height: 100px;
+        }
+        .item{
+            padding: 1em 3em;
+            background-color: cornflowerblue;
+        }
+        .item:nth-child(6n+1){
+            background-color: coral;
+        }
+        .item:nth-child(6n+2){
+            background-color:darkkhaki;
+        }
+        .item:nth-child(6n+3){
+            background-color:darksalmon;
+        }
+        .item:nth-child(6n+4){
+            background-color:greenyellow;
+        }
+        .item:nth-child(6n+5){
+            background-color:hotpink;
+        }
+        .dir-1{
+            align-items: flex-start;
+        }
+        .dir-2{
+            align-items: flex-end;
+        }
+        .dir-3{
+            align-items: center;
+        }
+        .dir-4{
+            align-items: stretch
+        }
+        .dir-5{
+            align-items: baseline
+        }
+        .i3{
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <h2>align-items: flex-start</h2>
+    <div class="wrapper dir-1">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item i3">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+    <h2>align-items: flex-end</h2>
+    <div class="wrapper dir-2">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+    <h2>align-items: center</h2>
+    <div class="wrapper dir-3">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item i3">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+    <h2>align-items: stretch</h2>
+    <div class="wrapper dir-4">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+    <h2>align-items: baseline</h2>
+    <div class="wrapper dir-5">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item" style="padding: 2em 3em;">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+</body>
+</html>

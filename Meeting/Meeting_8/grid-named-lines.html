@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            background-color: #09232d;
+            border-radius: 5px;
+            padding: 1em;
+            display: grid;
+            grid-template-columns: [col1-start] 1fr [col2-start] 2fr [col3-start] 1fr [col3-end];
+            grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [row3-end];
+            row-gap: 10px;
+            column-gap: 20px;
+        }
+        .grid-container div{
+            padding: 0.8em 4em;
+            background-color: pink;
+            border-radius: 3px;
+            /* font-weight: bold; */
+        }
+        .grid-container div:nth-child(odd){
+            background-color: cadetblue;
+        }
+        .item-1{
+            grid-column: col1-start/col3-end;
+            grid-row: 1;
+        }
+        .item-4{
+            grid-column: 3;
+            grid-row: row2-start/row3-end;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item-1">
+            <h1>header 1</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, assumenda praesentium illo quos qui dolores unde ea ab doloribus beatae autem. Cum animi praesentium perspiciatis? Porro sint neque voluptatibus mollitia sunt quaerat maxime nihil vitae eaque, voluptatem quis corporis tempore consequuntur labore unde ab saepe! Accusamus, exercitationem! Dicta quia reiciendis velit perferendis ab. Fuga hic, eius accusantium dicta obcaecati distinctio possimus expedita. Repellat maxime expedita rem distinctio voluptatem quae, sit necessitatibus possimus ducimus temporibus magni. Aperiam suscipit, vero numquam necessitatibus doloribus ex qui expedita tempora rerum ratione! Impedit, error dicta, fugiat eaque ipsa quibusdam eius iste odio laborum earum debitis expedita quam, atque nihil ab veniam harum. Asperiores, incidunt accusantium, ducimus repudiandae at officiis magni quis ex magnam ratione eveniet.</p>
+            <p>Nisi suscipit minus autem, expedita architecto delectus laboriosam dolore magni consequatur cum. Perspiciatis, dolore odit. Sequi tenetur rem laudantium? Quis adipisci aliquid modi debitis cupiditate dolore dolorum architecto minima neque voluptate fuga vitae quod beatae nulla ipsa rerum, unde dolorem quo facilis assumenda magnam perferendis odit possimus id. Nobis nisi amet iure illo dignissimos odit, tempora minus sunt soluta accusamus recusandae quasi iste laborum optio similique blanditiis ipsam autem. Ex, labore! Qui quos ex aspernatur pariatur voluptates esse exercitationem consequatur aliquam eius voluptas? Nisi ipsum alias saepe quisquam veritatis molestias corporis dolorem veniam aliquam, qui obcaecati maiores tempora accusantium nesciunt odio quia. Quaerat consectetur facere alias impedit. Fugit temporibus, illo accusamus consequatur, iure placeat ducimus, similique nulla eum modi deserunt.</p>
+            <p>Reprehenderit consequuntur nihil nesciunt repellendus exercitationem est nostrum itaque voluptatibus minima laudantium, quisquam, possimus totam sequi in vel adipisci quam recusandae magni earum ad iure nisi sapiente aperiam. Eligendi perferendis cum dolores natus repellat vel saepe non! At laboriosam similique nam quas perspiciatis esse deleniti mollitia a dolorem aperiam id, alias rem quisquam reiciendis consectetur illum tempore sed cupiditate velit eaque? Sunt recusandae similique labore eaque beatae, quos aut hic, fugiat magnam voluptates rem vitae id corporis inventore quia libero maxime corrupti distinctio quidem suscipit nobis accusamus! Mollitia officiis maxime animi neque consequuntur sequi a voluptatum quos, consectetur officia facilis. Corporis perspiciatis aspernatur magnam consequuntur amet sequi nesciunt, suscipit, saepe debitis provident laborum necessitatibus. Quam ratione repellat similique minus placeat.</p>
+            <p>Magni est architecto, explicabo, fuga ea ex, nesciunt commodi quas cumque expedita excepturi in? Soluta perferendis reprehenderit tenetur sequi eius cupiditate consectetur ex facilis adipisci et rem porro obcaecati magnam at quibusdam modi, reiciendis vitae. Rem quasi reiciendis saepe sequi culpa? Vero dignissimos, quos odio blanditiis quae quas neque ut cum quia rerum, quaerat fugiat. Magnam praesentium provident, molestiae, beatae obcaecati est tenetur sint dolores ab, optio facere laborum veritatis! Tenetur, ut ad placeat molestias tempore quaerat eligendi nam officiis deleniti aut corrupti sapiente sunt quam minus eius fugit omnis temporibus soluta obcaecati doloremque. Natus et in sunt exercitationem reprehenderit laudantium unde expedita iure eum dignissimos, neque cupiditate, officiis eveniet id corporis odit, non deleniti. Iste hic tenetur delectus eligendi.</p>
+            <p>Velit, aspernatur nostrum temporibus, et neque vel nobis quo iusto doloribus totam sint, molestias incidunt rerum aperiam dolor. Accusamus quod repellendus nisi perspiciatis, dolorum qui cumque magni fuga voluptates facilis, labore sequi, tempore alias? Temporibus odio provident omnis veritatis facere eligendi ducimus tenetur ut ipsum! Tempora enim tempore atque sint? Eligendi quibusdam fuga quas beatae harum porro repudiandae adipisci officiis labore, dolores, explicabo laborum cum quasi alias autem? Dolore asperiores suscipit ducimus laudantium voluptate ex possimus voluptatibus. Cum quibusdam eaque assumenda unde consequuntur ipsa, eius molestiae illum provident dolor enim hic possimus magni! Aut quisquam cumque quo at ad modi accusamus rem quia dicta iste fuga, laboriosam dolor maxime. Accusamus natus alias at et eius maiores aliquam saepe mollitia omnis.</p>
+        </div>
+        <div class="item-2">Item 2</div>
+        <div class="item-3">Item 3</div>
+        <div class="item-4">Item 4</div>
+        <div class="item-5">Item 5</div>
+        <div class="item-6">Item 6</div>
+        <div class="item-7">Item 7</div>
+        <div class="item-8">Item 8</div>
+        <div class="item-9">Item 9</div>
+    </div>
+</body>
+</html>
