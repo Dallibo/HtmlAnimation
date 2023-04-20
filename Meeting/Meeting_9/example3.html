@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get">
+        <label><span>Where are you from?</span>
+            <select name="country">
+                <option value="1">Ukraine</option>
+                <option value="2">USA</option>
+                <option value="3">Poland</option>
+                <option value="4">Sweden</option>
+            </select>
+        </label>
+        <div>
+            <label for="subsc"><span>Do you want to subscribe on news?</span>
+            <input type="checkbox" name="subscribe" id="subsc" checked>
+        </label>
+        </div>
+        <div>          
+                <div>Gender:</div>
+                <input type="radio" name="gender" value="male"><label>Male</label><br>
+                <input type="radio" name="gender" value="female"><label>Female</label><br>
+                <input type="radio" name="gender" value="another"><label>Another</label><br>          
+        </div>
+        <div>          
+            <div>Technology:</div>
+            <input type="radio" name="tech" value="angular"><label>Angular</label><br>
+            <input type="radio" name="tech" value="react"><label>React</label><br>
+            <input type="radio" name="tech" value="vue"><label>Vue</label><br>          
+    </div>
+        <input type="submit" value="Send"> 
+    </form>
+</body>
+</html>

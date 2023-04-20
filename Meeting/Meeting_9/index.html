@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            border: 1px solid navy;
+            margin: 20px auto;
+            width: 700px;
+            padding-top: 50px;
+        }
+        form label{
+            width: 120px;
+            display: inline-block;
+            text-align: right   ;
+        }
+        input[type="text"],
+        input[type="number"]{
+            font-size: 20px;
+            /* outline: none;
+            border: none; */
+        }
+        input[type="text"]:focus{
+            outline: none;
+            border: 2px solid navy;
+            border-radius: 10px;
+        }
+        form div{
+            margin-bottom: 20px;
+        }
+        input[type="submit"]{
+            display: block;
+            margin: auto;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        input[name="age"]{
+            background-color: aqua;
+        }
+        #slabel{
+            display: inline;
+        }
+        fieldset{
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" action="/user/create.php" enctype="multipart/form-data" name="createuser" novalidate>
+        <fieldset>
+            <div>
+                <label for="fname">Firstname:</label>
+                <input type="text" name="firstname" placeholder="Введіть своє ім'я" value="Сергій"
+                required id="fname">
+            </div>
+            <div>
+                <label id="slabel"><span>Surname:</span>
+                    <input type="text" name="surname" placeholder="Введіть своє прізвище"
+                required id="sname">
+                </label>
+            </div>
+            <div>
+                <label>Age:</label>
+                <input type="number" name="age">
+            </div>
+            <div>
+                <label>Photo:</label>
+                <input type="file" name="photo" accept="image/png" multiple>
+            </div>
+        </fieldset>
+        
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
