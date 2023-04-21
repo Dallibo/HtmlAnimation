@@ -5,78 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            background-color: rgb(212, 79, 31);
-            width: 500px;
-            display: flex;
-        }
-      
-        .modal1 {
-            width: 300px;
-            height: 400px;
-            background-color: rgb(231, 231, 231);
-            padding: 20px;
-            text-align: center;
-            border-radius: 5px;
-            text-align:justify;
-        }
-        .modal1 h2{
-            text-align: center;
-        }
-        .modal2{
-            text-align: center;
-            padding-top: 20px;
-            
-        }
-        .modal2 input{
-            text-align: center;
-            width: 250px;
-            height: 35px;
-            background-color: white;
-            font-size: 20px;
-            color: rgb(214, 214, 214);
-        }    
-        .modal3{
-            text-align: center;
-            padding-top: 20px;
-        }
-        .modal3 input{
-            text-align: center;
-            width: 250px;
-            height: 35px;
-            background-color: rgb(60, 167, 39);
-            font-size: 20px;
-            color: rgb(255, 255, 255);
-            border-bottom: 2px solid rgb(19, 128, 15);
-        }
-        .modal4{
-            text-align: center;
-            padding-top: 25px;
-            color: rgb(212, 79, 31);
-        }
-        input{
-        outline: none;
-        border: none;
-        }
-        
-
-
-    </style>
+    <link href="Hw_9.css" rel="stylesheet">
 </head>
 <body>
+    <div class="s">
+    <div class="s1">
     <div class="modal1">
     <div>
         <label><h2>Member Login</h2></label>
     </div>
         <div class="modal2">
             <label></label>
-            <input type="text" value="Username">
+            <input type="text" name="user" placeholder="User">
+        
 
         </div>
         <div class="modal2">
             <label></label>
-            <input type="text" value="Password">
+            <input type="text" name="Password" placeholder="Password">
 
         </div>
         <div class="modal3">
@@ -85,11 +31,26 @@
 
         </div>
         <div class="modal4">
-            <label><h4>Forgot Password</h4></label>
+            <label><h4>Forgot Password?</h4></label>
         </div>
-
-
+    </div>
 </div>
+    
+    <div class="s3">
+    <div class="log">
+       ... or log in width
+       </div>
+    </div>
+    <div class="s3">
+        <div class="facebook">
+            Facebook
+        </div>
+        <div class="twitter">
+            Twitter
+        </div>
+</div>
+</div>
+
     
 </body>
 </html>
