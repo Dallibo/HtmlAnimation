@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-weight: 400;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            min-width: 320px;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 100vh;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            flex-basis: 10vh;
+            background-color: pink;
+        }
+        main{
+            flex: 1 1 auto;
+            display: flex;
+        }
+        main>aside{
+            background-color: lavender;
+            flex-basis: 20%;
+        }
+        main>section{
+            background-color: lightcoral;
+            flex: 1 1 auto;
+        }
+        main>section+aside{
+            background-color: lightblue;
+            flex-basis: 20vw;
+        }
+        footer{
+            flex-basis: 5vh;
+            background-color: lightslategray;
+        }
+        @media screen and (max-width: 960px) {
+            main>aside:first-child{
+                flex-basis: 30%;            
+            }
+            main>section{
+                flex-basis: 70%;
+            }
+            main>section+aside{
+                display: none;
+            }
+        }
+        @media screen and (max-width: 570px) {
+            main{
+                flex-direction: column;
+            }
+            main>section{
+                order: -1;
+            }
+            main>aside:first-child{
+                flex-basis: 10vh;            
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Site Header </header>
+        <main>
+            <aside>Left Aside</aside>
+            <section>Main section</section>
+            <aside>Right aside</aside>
+        </main>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

@@ -5,104 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="Hw_9.1.css" rel="stylesheet">
-    <style>
-        .back{
-            display: flex;
-            width: 920px;
-            height: 500px;
-            background-image: url(look-up-look-down-photography-XfNzGZH7C3I-unsplash.jpg);
-        }
-        .content{
-            margin: 20px 80px;
-            padding: 5px 30px;
-            color: white;
-            box-shadow: 0px 0px 10px rgb(0, 0, 0);
-        }
-        input::placeholder{
-            padding-left: 5px;
-        }
-        input{
-        padding: 0;
-        width: 270px;
-        outline: none;
-        border: none;
-        }
-        input[type="phone"]{
-            width: 176px;
-        }
-        input[type="email"]{
-            width: 554px;
-        }
-        select{
-            width: 554px;
-            outline: none;
-            border: none;
-        }
-
-        label input, select{
-            height: 25px;
-            margin-top: 10px;
-            margin-right: 10px;
-        }
-        label span{
-            display: inline-block;
-            width: 130px;
-        }
-        label{
-            width: 500px;
-        }
-        .h1{
-            height: 100px;
-            width: 554px;
-        }
-        textarea{
-            margin-top: 10px;
-            outline: none;
-            border: none;
-            border: 2px solid rgb(207, 207, 207);
-            text-align: center;
-            margin-left:140px;
-            width: 554px;
-        }
-    </style>
+    <link href="Hw_8.1.css" rel="stylesheet">
 </head>
 <body>
-    <div class="back">
-    <div class="content">
+    <form>
         <h2>Contact form</h2>
         <div>Please fill in your information and we'll be sending your order.</div>
-    <div class="box">  
-        <label><span>Your name</span>
-            <input type="text" name="firstname" placeholder="first name">
-            <input type="text" name="firstname" placeholder="last name">
-        </label>
-    <br>
-            
-        <label><span>Your email</span>
-            <input type="email" name="email" placeholder="your_mail@mail.com">
-        </label>
-    <br>
-
-        <label><span>Phone*</span>
-            <input type="phone" name="phone1" placeholder="000">
-            <input type="phone" name="phone2" placeholder="000">
-            <input type="phone" name="phone3" placeholder="0000">
-        </label>
-    <br>
-
-    <label><span>Message subject*</span>
-        <select name="mess">
-            <option>other</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-        </select>
-    </label>
-    <br>
-        <label><span >Message*</span>
-            <textarea type="message" rows="6" cols="72" name="userMessage"></textarea>
-    </label>
-</div>
-    <hr>
-   
+        <label for="fname">Your name</label>
+            <input type="text" name="fname" id="fname" placeholder="first name">
+            <input type="text" name="lustname" id="lustname" placeholder="lust name">
+        <label for="email">Your email</label>
+            <input type="email" name="email" id="email" placeholder="your_mail@mail.com">
+        <label for="phone">Phone*</label>
+            <input type="phone" name="phone1" id="phone1" placeholder="000">
+            <input type="phone" name="phone2" id="phone2" placeholder="000">
+            <input type="phone" name="phone3" id="phone3" placeholder="0000">
+        
+        <label for="mess1">Message subject*</label>
+            <select name="mess" id="mess">
+                <option>other</option>
+                <option>other2</option>
+                <option>other3</option>
+                <option>other4</option>
+            </select>
+        
+        <label for="mess2">Message*</label>
+            <textarea type="message" name="message" id="mess2" rows="6" ></textarea>
+        
+    </form>
+    
+</body>
+</html>
