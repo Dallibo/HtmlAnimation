@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Logo</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">Javascript</a></li>
+                    <li><a href="mobile.html">Mobile</a></li>
+                </ul>
+            </div>
+        </nav>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">Javascript</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+        </ul>
+    </header>
+    <main>
+        <h2 class="teal lighten-2 amber-text text-darken-2">Materialize color example </h2>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <p class="grey lighten-1">
+                        Header with menu
+                    </p>
+                </div>
+                <div class="col xl3 l6 hide-on-med-and-down">
+                    <p class="teal darken-1">Left Aside</p>
+                </div>
+                <div class="col s12 l6 xl9">
+                    <p class="teal darken-1 truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                        molestias perferendis eligendi ea totam. Inventore sequi, autem corporis, voluptatibus explicabo
+                        maiores assumenda libero voluptatum placeat suscipit deserunt, quam quod laudantium. Praesentium ab
+                        modi nulla amet odit! Vel harum ullam reprehenderit!</p>
+                </div>
+                <div class="col s12">Footer</div>
+            </div>
+            <div class="row">
+                <div class="col s4">
+                    <img src="images/milad-fakurian-vTR7eR6kuyI-unsplash.jpg" class="responsive-img">
+                </div>
+                <div class="col s4">
+                    <img src="images/rhamely-VBJ-aIJScQI-unsplash.jpg" class="responsive-img circle">
+                </div>
+                <div class="col s4">
+                    <img src="images/yigit-arisoy-SGCu9WM5l1Q-unsplash.jpg" class="circle">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6">
+                    <a class="btn-floating pulse"><i class="material-icons" onclick="getDataFromPB24(event)">add_card</i></a>
+                    <a class="btn-floating btn-large teal darken-2 pulse"><i class="material-icons">fingerprint</i></a>
+                </div>
+                <div class="col s6">
+                    <!-- <div class="progress">
+                        <div class="indeterminate"></div>
+                    </div> -->
+                    <div class="preloader-wrapper big active">
+                    <div class="spinner-layer spinner-red">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="posts">
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Footer Content</h5>
+              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Links</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2014 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          </div>
+        </div>
+      </footer>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+        async function getDataFromPB24(e){
+            e.preventDefault();
+            let resp = await fetch("https://jsonplaceholder.typicode.com/comments?postId=1",
+            {
+                headers: {
+                    "accept": "application/json"
+                }
+            })
+            if(resp.ok === true)
+            {
+                let data = await resp.json();
+                let preloader = document.querySelector(".preloader-wrapper");
+                preloader.style.display = "none";
+                //alert(data);
+                let posts = document.getElementById("posts");
+                let userPostsData = Array.from(data);
+                userPostsData.forEach(elem=>{
+                    let div = document.createElement("div");
+                    div.classList.add("col");
+                    div.classList.add("s3");
+                    let head4 = document.createElement("h4");
+                    head4.innerText = elem.name;
+                    div.append(head4);
+                    let p1 = document.createElement("p");
+                    p1.innerText = elem.body;
+                    div.append(p1);
+                    posts.append(div);
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>
