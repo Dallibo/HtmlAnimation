@@ -1,0 +1,73 @@
+@div-fgColor: #ccc;
+@div-bgColor: cadetblue;
+@pad1: 10px;
+@selector-class: border;
+@selector-id: center;
+@col1: pink;
+@marg: 5px;
+@prop: color;
+@path: "images/";
+div{
+    background-color: @div-bgColor;
+    color: @div-fgColor;
+    padding: @pad1;
+    margin: @marg;
+}
+div:nth-child(2n+1){
+    background-color: darken(@div-bgColor, 20);
+}
+.@{selector-class}{
+    border: 2px dashed @col1;
+}
+#@{selector-id}{
+    text-align: center;
+}
+h2{
+    @{prop}: pink;
+}
+ul{
+    list-style-type: none;
+    li{
+        padding: @pad1;
+        a{
+            text-decoration: none;
+            color: @div-bgColor;
+            &:hover{
+                color: darken(@div-bgColor, 30);
+            }
+        }
+    }
+}
+.note{
+    &-success{
+        background-color: @col1;
+    }
+    &-warning{
+        background-color: darkorange;
+    }
+    &-error{
+        background-color: red;
+    }
+}
+// body:last-child{
+//     background-image: url("@{path}kinsey-w-xtv7vxC1u_0-unsplash.jpg");
+// }
+.d-flex(@dir){
+    display: flex;
+    flex-direction: @dir
+}
+.d-flex-col{
+    .d-flex(column);
+}
+.d-flex-row{
+    .d-flex(row);
+}
+#mixin-id(){
+    text-shadow: 5px 5px 8px #444;
+    font-size: 20px;
+    text-align: center;
+}
+#main{
+    #mixin-id();
+    color: darksalmon
+}

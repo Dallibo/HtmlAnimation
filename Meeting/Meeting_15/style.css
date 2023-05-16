@@ -1,0 +1,54 @@
+div {
+  background-color: cadetblue;
+  color: #ccc;
+  padding: 10px;
+  margin: 5px;
+}
+div:nth-child(2n+1) {
+  background-color: #395f60;
+}
+.border {
+  border: 2px dashed pink;
+}
+#center {
+  text-align: center;
+}
+h2 {
+  color: pink;
+}
+ul {
+  list-style-type: none;
+}
+ul li {
+  padding: 10px;
+}
+ul li a {
+  text-decoration: none;
+  color: cadetblue;
+}
+ul li a:hover {
+  color: #263f40;
+}
+.note-success {
+  background-color: pink;
+}
+.note-warning {
+  background-color: darkorange;
+}
+.note-error {
+  background-color: red;
+}
+.d-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.d-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+#main {
+  text-shadow: 5px 5px 8px #444;
+  font-size: 20px;
+  text-align: center;
+  color: darksalmon;
+}
